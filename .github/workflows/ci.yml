@@ -23,4 +23,4 @@ jobs:
         run: mvn clean compile
 
       - name: Run tests and check coverage
-        run: mvn test jacoco:check -Djacoco.minimum=0.80
+        run: mvn test jacoco:check -Djacoco.minimum=0.80 -Djacoco.rule.element=BUNDLE -Djacoco.rule.limit.counter=INSTRUCTION -Djacoco.rule.limit.value=COVEREDRATIO
